@@ -136,18 +136,20 @@ class Card {
 
         /**
          * gets a char representation of the suit
+         * Because of problems with unicode spacings
+         * I have to leave these blank
          * @return a char representation of the suit
          */
         public char getChar() {
             switch (this){
                 case DIAMONDS:
-                    return '\u2662';
+                    return ' ';//'\u2662';
                 case HEARTS:
-                    return '\u2661';
+                    return ' ';//'\u2661';
                 case SPADES:
-                    return '\u2660';
+                    return ' ';//'\u2660';
                 case CLUBS:
-                    return '\u2663';
+                    return ' ';//'\u2663';
             }
             return '?';
         }

@@ -180,7 +180,7 @@ public class GameController {
         if(player.getNumberOfSplits() < CasinoRules.MAX_NUMBER_OF_SPLITS && hand.canSplit()){
             availableActions.add(PlayerAction.SPLIT);
         }
-        if(CasinoRules.mayDoubleDown(hand)){
+        if(CasinoRules.mayDoubleDown(hand) && hand.canHit()){
             availableActions.add(PlayerAction.DOUBLE_DOWN);
         }
         return availableActions;
